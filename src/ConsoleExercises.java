@@ -25,11 +25,11 @@ public class ConsoleExercises {
         System.out.printf("Your sentence is: %s", userSent);
         scannerObj.nextLine();
         System.out.println("Please enter the length and width of your classroom.");
-        int roomLength = scannerObj.nextInt();
-        int roomWidth = scannerObj.nextInt();
-        int roomHeight = scannerObj.nextInt();
-        System.out.printf("Your classroom area = %dft x %dft , or %d%nsq ft", roomLength, roomWidth, roomLength*roomWidth);
-        System.out.printf("The perimeter of your classroom is %dft", (roomLength*2)+(roomWidth*2));
+        float roomLength = scannerObj.nextFloat();
+        float roomWidth = scannerObj.nextFloat();
+        float roomHeight = scannerObj.nextFloat();
+        System.out.printf("Your classroom area = %.2fft x %.2fft , or %.2fsq ft%n", roomLength, roomWidth, roomLength*roomWidth);
+        System.out.printf("The perimeter of your classroom is %.2fft%n", (roomLength*2)+(roomWidth*2));
         System.out.printf("The volume of your classroom is %.2f cubic ft", roomLength*roomWidth*roomHeight);
 
     }
