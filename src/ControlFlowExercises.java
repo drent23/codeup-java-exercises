@@ -27,18 +27,6 @@ public class ControlFlowExercises {
         int userGrade = scannerObj.nextInt();
         String userResponse = scannerObj.next();
         System.out.printf("You entered %d.  The corresponding letter grade is as follows:  ", userGrade);
-        if(95 <= userGrade <= 100) {
-            System.out.println("A+");
-        } else if (88 <= userGrade <= 94) {
-            System.out.println("A-");
-        } else if (84 <= userGrade <= 87) {
-            System.out.println("B+");
-        } else if (80 <= userGrade <= 84) {
-            System.out.println("B-");
-        } else if (75 <= userGrade <= 79) {
-            System.out.println("C+");
-        } else if (70)
-        }
     }
 
     }
