@@ -28,7 +28,8 @@ public class MethodsExercises {
         System.out.println(addition(4, 7));
         System.out.println(subtraction(20, 5));
         System.out.println(multiply(10, 10));
-        System.out.println(divide(63, 7));
+        System.out.println(divide(63, 9));
+//        System.out.println(divide(63, 0));
         System.out.println(modulus(10, 3));
     }
 
