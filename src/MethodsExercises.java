@@ -2,54 +2,58 @@ import java.util.Scanner;
 
 public class MethodsExercises {
     public static int addition(int x, int y) {
-        int result = x + y;
-        return result;
+        return x + y;
     }
     public static int subtraction(int x, int y) {
-        int result = x - y;
-        return result;
+        return x - y;
     }
     public static int multiply(int x, int y) {
-        int result = x * y;
-        return result;
+        return x * y;
     }
     public static int divide(int x, int y) {
-        int result = x / y;
-        return result;
+        return x / y;
     }
     public static int modulus(int x, int y) {
-        int result = x % y;
-        return result;
+        return x % y;
     }
     public static int getNum(int x, int y) {
         Scanner scannerObj = new Scanner(System.in);
-        System.out.println("Enter a number between " +x+ " & " +y);
+        System.out.printf("Enter a number between %d and %d%n", x, y);
         int userNum = scannerObj.nextInt();
-        if (x <= userNum && userNum <= y) {
-            System.out.printf("You entered %d, thanks for playing the game!", userNum);
-        } else {
-            System.out.println("You made an invalid entry.  Please reread the instructions and try again");
+        if (userNum < x || userNum > y) {
+            System.out.println("Invalid entry.  Please try again");
+            getNum(x, y);
         }
-        return userNum;
+            return userNum;
     }
-    public static long getFactor() {
+    public static void getFactors() {
         Scanner scannerObj = new Scanner(System.in);
-        char showGoesOn = scannerObj.next().charAt(0);
+        String keepGoing;
         do {
             System.out.println("PLease enter a number between 1 & 10 - ");
-            int userFact = scannerObj.nextInt();
-            if (userFact < 1 || userFact > 10) {
-                System.out.println("You entry was invalid.  Please enter a number between 1 & 10.");
-                continue;
-            }
+            int userFact = getNum(1,10);
             long result = 1;
+            System.out.println(userFact + "! = ");
             for (int i = 1; i <= userFact; i++) {
-                    result *= result * i;
+                    result *= i;
+                    if(i == userFact) {
+                        System.out.printf("%d = ", i);
+                    } else {
+                        System.out.printf("%d x ", i);
+                    }
             }
-            System.out.printf("%d! = %d%n", userFact, result);
-            System.out.println("Would you like to continue? Please enter \"y\" or \"n\".");
-        } while (Character.toLowerCase(showGoesOn) == "y");
-        return getFactor();
+            System.out.println(result);
+            System.out.println("Would you like to continue? Please enter 'yes' or 'no'");
+            keepGoing = scannerObj.next();
+        } while (keepGoing.equalsIgnoreCase("yes"));
+    }
+    public static void shootCraps() {
+        Scanner scannerObject = new Scanner(System.in);
+        System.out.println("Please enter the number of sides for your dice");
+        int sidesNum = scannerObject.nextInt();
+        int shotOne = (int) (Math.random() * sidesNum) + 1;
+        int shotTwo = (int) (Math.random() * sidesNum) + 1;
+        System.out.printf("You landed %d on your first roll and %d on your second", shotOne, shotTwo);
     }
     public static void main(String[] args) {
         System.out.println(addition(4, 7));
@@ -59,8 +63,11 @@ public class MethodsExercises {
 //        System.out.println(divide(63, 0));
         System.out.println(modulus(10, 3));
         getNum(50,100);
+
         System.out.println();
-        getFactor();
+        getFactors();
+
+        shootCraps();
     }
 
 }
