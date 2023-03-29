@@ -30,19 +30,27 @@ public class MethodsExercises {
         } else {
             System.out.println("You made an invalid entry.  Please reread the instructions and try again");
         }
-        scannerObj.nextLine();
         return userNum;
-
     }
-    public static int returnThree() {
-        return 3;
+    public static long getFactor() {
+        Scanner scannerObj = new Scanner(System.in);
+        char showGoesOn = scannerObj.next().charAt(0);
+        do {
+            System.out.println("PLease enter a number between 1 & 10 - ");
+            int userFact = scannerObj.nextInt();
+            if (userFact < 1 || userFact > 10) {
+                System.out.println("You entry was invalid.  Please enter a number between 1 & 10.");
+                continue;
+            }
+            long result = 1;
+            for (int i = 1; i <= userFact; i++) {
+                    result *= result * i;
+            }
+            System.out.printf("%d! = %d%n", userFact, result);
+            System.out.println("Would you like to continue? Please enter \"y\" or \"n\".");
+        } while (Character.toLowerCase(showGoesOn) == "y");
+        return getFactor();
     }
-    public static String shout(String s) {
-        return s.toUpperCase() + "!!!";
-    }
-
-
-
     public static void main(String[] args) {
         System.out.println(addition(4, 7));
         System.out.println(subtraction(20, 5));
@@ -50,9 +58,9 @@ public class MethodsExercises {
         System.out.println(divide(63, 9));
 //        System.out.println(divide(63, 0));
         System.out.println(modulus(10, 3));
-        System.out.println(getNum(50,100));
-        System.out.println(returnThree());
-        System.out.println(shout("hello"));
+        getNum(50,100);
+        System.out.println();
+        getFactor();
     }
 
 }
