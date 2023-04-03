@@ -16,11 +16,11 @@ public class Person {
         //TODO print message to console w/ person's name
         System.out.println("Hello, I'm " + this.name + ".  Nice to meet you!");
     }
-    public static void main(String[] args){
-        Person firstPerson = new Person("Tamica");
-        firstPerson.setName("Travis");
-        System.out.println(firstPerson.getName());
-        firstPerson.sayHello();
+//    public static void main(String[] args){
+//        Person firstPerson = new Person("Tamica");
+//        firstPerson.setName("Travis");
+//        System.out.println(firstPerson.getName());
+//        firstPerson.sayHello();
         //first 'expectation' example
 
 //        Person person1 = new Person("John");
@@ -46,4 +46,4 @@ public class Person {
 
 
     }
-}
+
