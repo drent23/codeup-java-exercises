@@ -3,7 +3,9 @@ package util;
 public class InputTest {
     public static void main (String[] args) {
         Input inputObj = new Input();
+            System.out.println("Please type a string");
             String stringObj = inputObj.getString();
+            System.out.println("stringObj = " + stringObj);
             System.out.println(stringObj);
             System.out.println("Is coding fun?");
             boolean codingFun = inputObj.yesNo();

@@ -12,10 +12,10 @@ public class Input {
         String userBool = this.scanner.next();
         return userBool.equalsIgnoreCase("y") || userBool.equalsIgnoreCase("yes");
     }
-    public int getInt() {
+    int getInt() {
         return this.scanner.nextInt();
     }
-    public int getInt(int min, int max) {
+    int getInt(int min, int max) {
         int userNum;
         do {
             System.out.printf("Please enter a number between %d and %d: %n", min, max);
@@ -23,15 +23,15 @@ public class Input {
         } while (userNum < min || userNum > max);
         return userNum;
     }
-    public double getDouble(){
+    double getDouble(){
         return this.scanner.nextDouble();
     }
 
-    public double getDouble(double min, double max){
+    double getDouble(double min, double max){
         double userDub;
         do {
             System.out.printf("Please enter a decimal number between %f and %f: %n", min, max);
-            userDub = this.scanner.nextInt();
+            userDub = this.scanner.nextDouble();
         } while (userDub < min || userDub > max);
         return userDub;
     }
