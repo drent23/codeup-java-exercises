@@ -5,7 +5,7 @@ public class Input {
     public Input(){
         this.scanner = new Scanner(System.in);
     }
-    public getString() {
+    public String getString() {
         return this.scanner.nextLine();
     }
     public String getString(String prompt){
@@ -20,14 +20,14 @@ public class Input {
         System.out.println(prompt);
         return yesNo();
     }
-    public getInt() {
+    public int getInt() {
         return this.scanner.nextInt();
     }
     public int getInt(String prompt){
         System.out.println(prompt);
         return getInt();
     }
-    public getInt(int min, int max) {
+    public int getInt(int min, int max) {
         int userNum;
         do {
             System.out.printf("Please enter a number between %d and %d: %n", min, max);
@@ -35,7 +35,7 @@ public class Input {
         } while (userNum < min || userNum > max);
         return userNum;
     }
-    public getInt(int min, int max, String prompt) {
+    public int getInt(int min, int max, String prompt) {
         int userNum;
         do {
             System.out.println(prompt);

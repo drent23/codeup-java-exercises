@@ -19,7 +19,7 @@ public class CircleApp {
             System.out.printf("The radius is %f%n", radius);
             System.out.printf("The circle's circumference is %f and the area is %f%n", circumference, area);
             System.out.println("Would you like to continue?");
-        } while {inputObj.yesNo()};
+        } while (inputObj.yesNo());
         System.out.printf("There are a total of %d circles.%n", userCircles);
     }
 }
