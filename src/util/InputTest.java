@@ -18,6 +18,17 @@ public class InputTest {
             System.out.println("Please enter a decimal number: ");
             double diffDub = inputObj.getDouble();
             System.out.println(diffDub);
+            String promptStr = inputObj.getString("Please enter another string.");
+            System.out.println(promptStr);
+            boolean keepGoing = inputObj.yesNo("Want to continue?");
+            System.out.println(keepGoing);
+            int thirdInt = inputObj.getInt("Please enter another number.");
+            System.out.println(thirdInt);
+            double thirdDub = inputObj.getDouble("Please enter a decimal number.");
+            System.out.println(thirdDub);
+            double fourthDub = inputObj.getDouble(1,10, "Please enter a decimal number between 1 and 10.");
+            System.out.println(fourthDub);
+
 
     }
 }
