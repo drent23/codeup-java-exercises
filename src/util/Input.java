@@ -21,7 +21,10 @@ public class Input {
         return yesNo();
     }
     public int getInt() {
-        return this.scanner.nextInt();
+        try {
+            Integer parsedInt = Integer.valueOf();
+        } catch  (NumberFormatException e) {
+        e.printStackTrace();
     }
     public int getInt(String prompt){
         System.out.println(prompt);
@@ -44,8 +47,11 @@ public class Input {
         return userNum;
     }
     public double getDouble () {
-        return this.scanner.nextDouble();
-    }
+            try {
+                Integer parsedInt = Integer.valueOf();
+            } catch  (NumberFormatException e) {
+                e.printStackTrace();
+            }
     public double getDouble (String prompt){
         System.out.println(prompt);
         return getDouble();
